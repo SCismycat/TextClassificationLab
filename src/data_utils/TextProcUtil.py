@@ -106,7 +106,7 @@ def read_and_process(path):
     data = pd.read_csv(path)
     ques = data["ques"].values.tolist()
     labels = data["label"].values.tolist()
-    line_x = [extract_chinese(str(line).upper()) for line in labels]
+    line_x = [str(line).upper() for line in labels]
     line_y = [extract_chinese(str(line).upper()) for line in ques]
     return line_x, line_y
 
